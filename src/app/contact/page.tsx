@@ -2,11 +2,7 @@ import React from 'react'
 
 function page() {
   return (
-   <main>
-    <h1>
-      its nahid 
-    </h1>
-   </main>
+   <h2>contact page</h2>
   )
 }
 

@@ -28,17 +28,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-  <div className="layout-wrapper">
-
-         <Header />
-
-<main className="main-content">
-        {children}
-  </main>
-        <Footer />
-  </div>
-          {/* <header>My Navbar header</header>
-        <footer>Nahid Portfolio footer</footer> */}
+        <div className="layout-wrapper">
+          <Header />
+          <main className="main-content">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer style={{ padding: '1rem', backgroundColor: '#f0f0f0' }}>
+    <footer className="bg-gray-500" style={{ padding: '1rem' }}>
       <p className="text-center">© 2025 My Footer Components ❤️</p>
     </footer>
   );

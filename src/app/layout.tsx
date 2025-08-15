@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter  } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -25,7 +25,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${inter.variable} antialiased`}
       >
-        <div className="layout-wrapper">
+
+        <div className='flex flex-col h-screen'>
+
           <Header />
           <main className="main-content">
             {children}

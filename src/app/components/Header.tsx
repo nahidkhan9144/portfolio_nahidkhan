@@ -4,10 +4,8 @@ const Header = () => {
       <h1><a href="../">My Header Component</a></h1>
       <nav>
         <ul className="flex gap-5">
-          <li><a href="../about">About Page</a></li>
-          <li>About</li>
+          <li><a href="../about">About</a></li>
           <li>Contact</li>
-          <li>Social Media</li>
           <li>Color Theme</li>
         </ul>
       </nav>

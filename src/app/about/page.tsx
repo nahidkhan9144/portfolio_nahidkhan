@@ -3,40 +3,52 @@ import Image from 'next/image'
 function page() {
   return (
     <>
-      <div className='mb-5 flex justify-between'>
-        <div className='pl-5 flex justify-center items-center min-h-screen'>
-          <Image
-            src="/images/profile.jpg"
-            alt="Nahid's Image"
-            width={500}
-            height={500}
-          />
+      <div className='items-center justify-center mt-20'>
+        <h2 className='text-center text-3xl font-bold'>About Page</h2>
+        <div className='text-center mt-2'>
+          <p className='p-2'>Web and Mobile Developer with 2.4 years of experience, skilled in PHP, Laravel, React.js, AngularJS, HTML5, CSS3, and JavaScript. Experienced in building responsive applications, integrating RESTful APIs, and delivering clean, maintainable code. Adaptable, proactive, and committed to creating scalable and user-focused solutions</p>
         </div>
-
-        <div className='flex flex-wrap justify-center'>
-          {/* <div className='row mt-4 p-3 w-full border-b border-blue-100 shadow-xl rounded-tl-sm hover:border-blue-600 hover:border rounded hover:shadow-md hover:shadow-blue-100 '> */}
-            <h2 className='text-center'>about page</h2>
-          {/* </div> */}
-          <div className='pl-52 pr-52 '>
-            <div className='row mt-4 p-3 border-b border-blue-100 shadow-xl rounded-tl-sm hover:border-blue-600 hover:border rounded hover:shadow-md hover:shadow-blue-100 '>
-              I’m a web and mobile developer with 2.4 years of experience, proficient in PHP, Laravel, React.js, AngularJS, HTML5, CSS3, and JavaScript, with strong skills in building responsive applications, integrating RESTful APIs, and adapting quickly to new tools and technologies.
+        <div className='inset-0 backdrop-blur-xs mr-4 ml-4'>
+          <hr className='mt-3' />
+          <div className='flex justify-center gap-20 mt-3'>
+            <div className='text-left'>
+              <p className='text-2xl text-blue-500 font-bold'>Experience</p>
+              <p className='text-xl font-bold'>Tickle Right Eduventures.</p>
+              <p>Junior Software Developer</p>
+              <p>Mumbai, India</p>
+              <p>2023 - present</p>
             </div>
-            <div className="row mt-4 p-3 border-b border-red-100 shadow-xl rounded-tl-sm hover:border-blue-600 hover:border rounded hover:shadow-md hover:shadow-blue-100 ">
-              <ul className="ml-6 space-y-4">
-                <li>• Web and Mobile Developer with 2.4 years of hands-on industry experience.</li>
-                <li>• Skilled in creating responsive, user-centric web and mobile applications.</li>
-                <li>• Proficient in modern frameworks and technologies including PHP, Laravel, React.js, and AngularJS.</li>
-                <li>• Strong front-end development expertise using HTML5, CSS3, and JavaScript.</li>
-                <li>• Experienced in integrating RESTful APIs and third-party services to enhance functionality.</li>
-                <li>• Committed to writing clean, maintainable code and following best development practices.</li>
-                <li>• Fast learner with a proactive attitude, adaptable to new tools, frameworks, and team dynamics.</li>
-                <li>• Dedicated to contributing to innovative, scalable, and impactful software solutions.</li>
-              </ul>
+            <div className='text-left'>
+              <p className='text-2xl text-blue-500 font-bold'>Education</p>
+              <p className='text-xl font-bold'>Bachelor's Degree</p>
+              <p>Bachelor of Science<br /> <small>(Information Technology)</small></p>
+              <p><small>(7.67 CGPA)</small></p>
+              <p>University Of Mumbai</p>
+              <p>2020 - 2023</p>
             </div>
+          </div>
 
+        </div>
+        <hr className='mt-3' />
+        <p className='text-center text-2xl font-bold'>Projects</p>
+        <div className='grid gap-4 mb-5 grid-cols-1 md:grid-cols-2 lg-col justify-items-center md:justify-evenly'>
+          <div className='pl-5 pr-5 pt-1 pb-1 rounded text-left inset-0 backdrop-blur-xs'>
+            <p className='text-xl font-bold'>Disease Prediction System</p>
+            <Image src='https://picsum.photos/800/400?random=1' height={150} width={150} alt='Disease Prediction System' style={{ objectFit: "cover", borderRadius: "8px" }} />
+            <p>Developed a Python-based backend integrating machine learning for health predictions. Implemented data preprocessing and model training with pandas, NumPy, and scikit-learn, focusing on accuracy and model evaluation. Built a user-friendly interface using python Tkinter for symptom input and prediction display, emphasizing real-world applicability</p>
+          </div>
+          <div className='pl-5 pr-5 pt-1 pb-1 rounded text-left inset-0 backdrop-blur-xs'>
+            <p className='text-xl font-bold'>Library Management System</p>
+            <Image src='https://picsum.photos/800/400?random=2' height={150} width={150} alt='Library Management System' style={{ objectFit: "cover", borderRadius: "8px" }}/>
+            <p>Developed a comprehensive library management system using Laravel for the frontend and PHP for the backend. Implemented features such as user authentication, book search, and borrowing management, ensuring a seamless user experience.</p>
+          </div>
+          <div className='pl-5 pr-5 pt-1 pb-1 rounded text-left inset-0 backdrop-blur-xs'>
+            <p className='text-xl font-bold'>AI - Local ChatBot</p>
+              <Image src='https://picsum.photos/800/400?random=3' height={150} width={150} alt='AI - Local ChatBot' style={{ objectFit: "cover", borderRadius: "8px" }}/>
+            <p>Developed a chatbot application using Python and Natural Language Processing (NLP) techniques. Implemented intent recognition and entity extraction for user queries, providing accurate and context-aware responses. Deployed the chatbot on a web interface for easy access.</p>
+            <p>Implemented a local AI chatbot that runs entirely on-device using Ollama (Llama-family models) and a Streamlit UI. Added a Hugging Face fallback for offline pipelines, focusing on responsive UX, clean prompts, and easy model switching. Leveraged my experience in Python and modern web stacks to ship a smooth, user-friendly interface.</p>
           </div>
         </div>
-
       </div>
     </>
   )

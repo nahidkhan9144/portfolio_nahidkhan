@@ -1,42 +1,33 @@
 import React from 'react'
-import Image from 'next/image'
 function page() {
   return (
     <>
-      <div className='mb-5 flex justify-between'>
-        <div className='pl-5 flex justify-center items-center min-h-screen'>
-          <Image
-            src="/images/profile.jpg"
-            alt="Nahid's Image"
-            width={500}
-            height={500}
-          />
+      <div className='items-center justify-center mt-20'>
+        <h2 className='text-center text-3xl font-bold'>About Page</h2>
+        <div className='text-center mt-2'>
+          <p className='p-2'>Web and Mobile Developer with 2.4 years of experience, skilled in PHP, Laravel, React.js, AngularJS, HTML5, CSS3, and JavaScript. Experienced in building responsive applications, integrating RESTful APIs, and delivering clean, maintainable code. Adaptable, proactive, and committed to creating scalable and user-focused solutions</p>
         </div>
-
-        <div className='flex flex-wrap justify-center'>
-          {/* <div className='row mt-4 p-3 w-full border-b border-blue-100 shadow-xl rounded-tl-sm hover:border-blue-600 hover:border rounded hover:shadow-md hover:shadow-blue-100 '> */}
-            <h2 className='text-center'>about page</h2>
-          {/* </div> */}
-          <div className='pl-52 pr-52 '>
-            <div className='row mt-4 p-3 border-b border-blue-100 shadow-xl rounded-tl-sm hover:border-blue-600 hover:border rounded hover:shadow-md hover:shadow-blue-100 '>
-              I’m a web and mobile developer with 2.4 years of experience, proficient in PHP, Laravel, React.js, AngularJS, HTML5, CSS3, and JavaScript, with strong skills in building responsive applications, integrating RESTful APIs, and adapting quickly to new tools and technologies.
+        <div className='inset-0 backdrop-blur-sm mr-4 ml-4'>
+          <hr className='mt-3' />
+          <div className='flex justify-center gap-20 mt-3'>
+            <div className='text-left'>
+              <p className='text-2xl text-blue-500 font-bold'>Experince</p>
+              <p className='text-xl font-bold'>Tickle Right Edv.</p>
+              <p>Junior Software Developer</p>
+              <p>Mumbai, India</p>
+              <p>2023 - present</p>
             </div>
-            <div className="row mt-4 p-3 border-b border-red-100 shadow-xl rounded-tl-sm hover:border-blue-600 hover:border rounded hover:shadow-md hover:shadow-blue-100 ">
-              <ul className="ml-6 space-y-4">
-                <li>• Web and Mobile Developer with 2.4 years of hands-on industry experience.</li>
-                <li>• Skilled in creating responsive, user-centric web and mobile applications.</li>
-                <li>• Proficient in modern frameworks and technologies including PHP, Laravel, React.js, and AngularJS.</li>
-                <li>• Strong front-end development expertise using HTML5, CSS3, and JavaScript.</li>
-                <li>• Experienced in integrating RESTful APIs and third-party services to enhance functionality.</li>
-                <li>• Committed to writing clean, maintainable code and following best development practices.</li>
-                <li>• Fast learner with a proactive attitude, adaptable to new tools, frameworks, and team dynamics.</li>
-                <li>• Dedicated to contributing to innovative, scalable, and impactful software solutions.</li>
-              </ul>
+            <div className='text-left'>
+              <p className='text-2xl text-blue-500 font-bold'>Education</p>
+              <p className='text-xl font-bold'>Bachelor's Degree</p>
+              <p>Bachelor of Science<br/> <small>(Information Technology)</small></p>
+              <p><small>(7.67 CGPA)</small></p>
+              <p>University Of Mumbai</p>
+              <p>2020 - 2023</p>
             </div>
-
           </div>
-        </div>
 
+        </div>
       </div>
     </>
   )

@@ -7,7 +7,7 @@ function page() {
         <div className='text-center mt-2'>
           <p className='p-2'>Web and Mobile Developer with 2.4 years of experience, skilled in PHP, Laravel, React.js, AngularJS, HTML5, CSS3, and JavaScript. Experienced in building responsive applications, integrating RESTful APIs, and delivering clean, maintainable code. Adaptable, proactive, and committed to creating scalable and user-focused solutions</p>
         </div>
-        <div className='inset-0 backdrop-blur-sm mr-4 ml-4'>
+        <div className='inset-0 backdrop-blur-xs mr-4 ml-4'>
           <hr className='mt-3' />
           <div className='flex justify-center gap-20 mt-3'>
             <div className='text-left'>
@@ -20,13 +20,29 @@ function page() {
             <div className='text-left'>
               <p className='text-2xl text-blue-500 font-bold'>Education</p>
               <p className='text-xl font-bold'>Bachelor's Degree</p>
-              <p>Bachelor of Science<br/> <small>(Information Technology)</small></p>
+              <p>Bachelor of Science<br /> <small>(Information Technology)</small></p>
               <p><small>(7.67 CGPA)</small></p>
               <p>University Of Mumbai</p>
               <p>2020 - 2023</p>
             </div>
           </div>
 
+        </div>
+        <hr className='mt-3' />
+        <p className='text-center text-2xl font-bold'>Projects</p>
+        <div className='grid gap-4  grid-cols-1 md:grid-cols-2 lg-col justify-items-center md:justify-evenly'>
+          <div className='pl-5 pr-5 pt-1 pb-1 rounded text-left inset-0 backdrop-blur-xs'>
+            <p className='text-xl font-bold'>Project 1</p>
+            <p>A web application built with React.js and Node.js</p>
+          </div>
+          <div className='pl-5 pr-5 pt-1 pb-1 rounded text-left inset-0 backdrop-blur-xs'>
+            <p className='text-xl font-bold'>Project 1</p>
+            <p>A web application built with React.js and Node.js</p>
+          </div>
+          <div className='pl-5 pr-5 pt-1 pb-1 rounded text-left inset-0 backdrop-blur-xs'>
+            <p className='text-xl font-bold'>Project 1</p>
+            <p>A web application built with React.js and Node.js</p>
+          </div>
         </div>
       </div>
     </>

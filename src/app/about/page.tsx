@@ -4,7 +4,7 @@ function page() {
   return (
     <>
       <div className='items-center justify-center mt-20'>
-        <h2 className='text-center text-3xl font-bold'>About Page</h2>
+        <h2 className='text-center text-3xl font-bold'>About Me</h2>
         <div className='text-center mt-2'>
           <p className='p-2'>Web and Mobile Developer with 2.4 years of experience, skilled in PHP, Laravel, React.js, AngularJS, HTML5, CSS3, and JavaScript. Experienced in building responsive applications, integrating RESTful APIs, and delivering clean, maintainable code. Adaptable, proactive, and committed to creating scalable and user-focused solutions</p>
         </div>

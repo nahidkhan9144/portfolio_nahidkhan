@@ -28,17 +28,19 @@ interface PixelImageProps {
   colorRevealDelay?: number; // in ms
 }
 
-export const PixelImage = ({
-  src,
-  grid = "6x4",
-  grayscaleAnimation = true,
-  pixelFadeInDuration = 1000,
-  maxAnimationDelay = 1200,
-  colorRevealDelay = 1300,
-  customGrid,
-}: PixelImageProps) => {
+// removed invalid destructuring and function signature
+  export const PixelImage: React.FC<PixelImageProps> = ({
+    src,
+    grid = "6x4",
+    grayscaleAnimation = true,
+    pixelFadeInDuration = 1000,
+    maxAnimationDelay = 1200,
+    colorRevealDelay = 1300,
+    customGrid,
+  }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [showColor, setShowColor] = useState(false);
+  const [delays, setDelays] = useState<number[]>([]);
 
   const MIN_GRID = 1;
   const MAX_GRID = 16;
@@ -68,6 +70,14 @@ export const PixelImage = ({
     return () => clearTimeout(colorTimeout);
   }, [colorRevealDelay]);
 
+  useEffect(() => {
+    const total = rows * cols;
+    const generatedDelays = Array.from({ length: total }, () =>
+      Math.random() * maxAnimationDelay
+    );
+    setDelays(generatedDelays);
+  }, [rows, cols, maxAnimationDelay]);
+
   const pieces = useMemo(() => {
     const total = rows * cols;
     return Array.from({ length: total }, (_, index) => {
@@ -81,13 +91,13 @@ export const PixelImage = ({
         ${col * (100 / cols)}% ${(row + 1) * (100 / rows)}%
       )`;
 
-      const delay = Math.random() * maxAnimationDelay;
+      const delay = delays[index] ?? 0;
       return {
         clipPath,
         delay,
       };
     });
-  }, [rows, cols, maxAnimationDelay]);
+  }, [rows, cols, delays]);
 
   return (
     <div className="relative h-72 w-72 select-none md:h-96 md:w-96">

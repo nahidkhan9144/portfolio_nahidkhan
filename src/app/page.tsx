@@ -43,17 +43,17 @@ function Page() {
     "Hugging Face",
     "Ollama"
   ];
- useEffect(() => {
-    if (typeof window !== "undefined" && window.AOS) {
-      window.AOS.init();
-    }
+  const [mounted, setMounted] = React.useState(false);
+  useEffect(() => {
+    setMounted(true);
+    if (window.AOS) window.AOS.init();
   }, []);
   return (
     <>
       <div className=' mt-10 pt-10'>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 min-h-screen 100-vh">
-          <div data-aos="fade-up " className="flex flex-col justify-center items-start px-6">
+          <div  {...(mounted ? {'data-aos': "fade-up "} : {})} className="flex flex-col justify-center items-start px-6">
             <h1 className="pt-4 text-center text-5xl md:text-6xl lg:text-8xl font-bold">
               <TypingAnimation>Hey! This is Nahid Khan 🙋‍♀️</TypingAnimation>
             </h1>

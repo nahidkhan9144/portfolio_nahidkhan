@@ -1,4 +1,6 @@
-import React from 'react'
+
+"use client";
+import React, { useEffect } from 'react';
 import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { WordRotate } from "@/components/magicui/word-rotate";
 import {
@@ -8,7 +10,16 @@ import {
 // import Image from 'next/image'
 import { PixelImage } from "@/components/magicui/pixel-image";
 
-function page() {
+declare global {
+  interface Window {
+    AOS?: {
+      init: () => void;
+      [key: string]: any;
+    };
+  }
+}
+
+function Page() {
 
   const SKILLS_ROW_A = [
     "PHP",
@@ -32,16 +43,17 @@ function page() {
     "Hugging Face",
     "Ollama"
   ];
-
-  <script>
-    AOS.init();
-  </script>
+  const [mounted, setMounted] = React.useState(false);
+  useEffect(() => {
+    setMounted(true);
+    if (window.AOS) window.AOS.init();
+  }, []);
   return (
     <>
       <div className=' mt-10 pt-10'>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 min-h-screen 100-vh">
-          <div data-aos="fade-up " className="flex flex-col justify-center items-start px-6">
+          <div  {...(mounted ? {'data-aos': "fade-up "} : {})} className="flex flex-col justify-center items-start px-6">
             <h1 className="pt-4 text-center text-5xl md:text-6xl lg:text-8xl font-bold">
               <TypingAnimation>Hey! This is Nahid Khan 🙋‍♀️</TypingAnimation>
             </h1>
@@ -120,4 +132,4 @@ function page() {
   );
 }
 
-export default page
+export default Page

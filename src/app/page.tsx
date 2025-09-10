@@ -2,7 +2,7 @@
 "use client";
 import React, { useEffect } from 'react';
 import { TypingAnimation } from "@/components/magicui/typing-animation";
-import { WordRotate } from "@/components/magicui/word-rotate";
+// import { WordRotate } from "@/components/magicui/word-rotate";
 import {
   ScrollVelocityContainer,
   ScrollVelocityRow,

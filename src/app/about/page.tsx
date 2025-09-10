@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
+// import Image from 'next/image'
 function page() {
   return (
     <>
@@ -20,7 +20,7 @@ function page() {
             </div>
             <div className='text-left'>
               <p className='text-2xl text-blue-500 font-bold'>Education</p>
-              <p className='text-xl font-bold'>Bachelor's Degree</p>
+              <p className='text-xl font-bold'>Bachelor&apos;s Degree</p>
               <p>Bachelor of Science<br /> <small>(Information Technology)</small></p>
               <p><small>(7.67 CGPA)</small></p>
               <p>University Of Mumbai</p>

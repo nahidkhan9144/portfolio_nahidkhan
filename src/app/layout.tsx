@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],

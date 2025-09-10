@@ -59,7 +59,7 @@ function Page() {
             </h1>
 
             <p className='text-left pl-4 font-semibold'>● I am a Full Stack Web Developer</p>
-            <p className='text-left pl-4 font-semibold'>● I have experience in PHP, Laravel, AngularJS, React.js, Flutter, Dart, JavaScript, Bootstrap, Tailwind CSS, jQuery, AJAX, and API Integration.</p>
+            <p className='text-left pl-4 font-semibold'>● I have experience in PHP, Laravel, AngularJS, React.js, JavaScript, Bootstrap, Tailwind CSS, jQuery, AJAX, and API Integration.</p>
             <p className="text-left pl-4 font-semibold">
               ● I also worked on AI-based projects using Python, where I built
               interactive dashboards with Streamlit, integrated Hugging Face models, and

@@ -26,6 +26,18 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-VBSG04TBXV`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga-script" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-VBSG04TBXV');
+          `}
+        </Script>
+        {/* <Script
           id="gtm-script"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -34,10 +46,10 @@ export default function RootLayout({
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-VBSG04TBXV');
+              })(window,document,'script','dataLayer','G-VBSG04TBXV');
             `,
           }}
-        />
+        /> */}
       </head>
       <body className={`${inter.variable} antialiased`}>
         <div className="relative min-h-screen flex flex-col">

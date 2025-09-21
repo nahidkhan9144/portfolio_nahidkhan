@@ -4,8 +4,9 @@ import "./globals.css";
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
+
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -17,16 +18,31 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <head>
+      <body className={`${inter.variable} antialiased`}>
+        <div className="relative min-h-screen flex flex-col">
+          {/* Background */}
+          <FlickeringGrid
+            className="fixed inset-0 -z-10 w-full h-full"
+            squareSize={4}
+            gridGap={6}
+            color="#5c718a"
+            maxOpacity={0.5}
+            flickerChance={0.1}
+          />
+          <Header />
+          <main className="main-content flex-1">{children}</main>
+          <Footer />
+        </div>
+
+        {/* Google Analytics Scripts */}
         <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-VBSG04TBXV`}
+          src="https://www.googletagmanager.com/gtag/js?id=G-VBSG04TBXV"
           strategy="afterInteractive"
         />
         <Script id="ga-script" strategy="afterInteractive">
@@ -38,30 +54,8 @@ export default function RootLayout({
           `}
         </Script>
 
-      </head>
-      <body className={`${inter.variable} antialiased`}>
-        <div className="relative min-h-screen flex flex-col">
-          {/* Background */}
-          <FlickeringGrid
-            className="fixed inset-0 -z-10 w-full h-full"
-            squareSize={4}
-            gridGap={6}
-            color="#5c718a"
-            // color="#60A5FA"
-            maxOpacity={0.5}
-            flickerChance={0.1}
-          />
-
-          {/* Foreground content */}
-          <Header />
-          <main className="main-content flex-1">
-            {children}
-          </main>
-          <Footer />
-        </div>
+        <SpeedInsights />
       </body>
-
-
     </html>
   );
 }

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
@@ -40,7 +40,7 @@ export default function RootLayout({
           <Footer />
         </div>
 
-        {/* Google Analytics Scripts */}
+        {/* ✅ Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-VBSG04TBXV"
           strategy="afterInteractive"

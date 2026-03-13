@@ -5,6 +5,8 @@ const Header = () => {
       <nav>
         <ul className="flex gap-5">
           <li className="font-bold"><a href="../about">About</a></li>
+          <li className="font-bold"><a href="../projects">Projects</a></li>
+          <li className="font-bold"><a href="./resume">Resume</a></li>  
         </ul>
       </nav>
     </header>

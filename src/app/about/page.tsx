@@ -1,61 +1,80 @@
-import React from 'react'
-// import Image from 'next/image'
-function page() {
+import React from "react";
+
+export default function page() {
   return (
-    <>
-      <div className='items-center justify-center mt-20'>
-        <h2 className='text-center text-3xl font-bold'>About Me</h2>
-        <div className='text-center mt-2'>
-          <p className='p-2'>Web and Mobile Developer with 2.4 years of experience, skilled in PHP, Laravel, React.js, AngularJS, HTML5, CSS3, and JavaScript. Experienced in building responsive applications, integrating RESTful APIs, and delivering clean, maintainable code. Adaptable, proactive, and committed to creating scalable and user-focused solutions</p>
-        </div>
-        <div className='inset-0 backdrop-blur-xs mr-4 ml-4'>
-          <hr className='mt-3' />
-          <div className='flex justify-center gap-20 mt-3'>
-            <div className='text-left'>
-              <p className='text-2xl text-blue-500 font-bold'>Experience</p>
-              <p className='text-xl font-bold'>Tickle Right Eduventures.</p>
-              <p>Junior Software Developer</p>
-              <p>Mumbai, India</p>
-              <p>2023 - present</p>
-            </div>
-            <div className='text-left'>
-              <p className='text-2xl text-blue-500 font-bold'>Education</p>
-              <p className='text-xl font-bold'>Bachelor&apos;s Degree</p>
-              <p>Bachelor of Science<br /> <small>(Information Technology)</small></p>
-              <p><small>(7.67 CGPA)</small></p>
-              <p>University Of Mumbai</p>
-              <p>2020 - 2023</p>
-            </div>
-          </div>
+    <div className="min-h-screen py-20 px-4 text-white">
 
-        </div>
-        <hr className='mt-3' />
-        <p className='text-center text-2xl font-bold mb-6'>Projects</p>
-        <div className='grid gap-4 mb-5 grid-cols-1 md:grid-cols-2 lg-col justify-items-center md:justify-evenly'>
-          <div className='pl-5 pr-5 pt-1 pb-1 rounded text-left inset-0 backdrop-blur-xs'>
-            <a className='text-xl font-bold text-blue-500' target="_blank" href="https://github.com/nahidkhan9144/disease-prediction-system">Disease Prediction System</a>
-            {/* <Image src='https://picsum.photos/800/400?random=1' height={150} width={150} alt='Disease Prediction System' style={{ objectFit: "cover", borderRadius: "8px" }} /> */}
-            <p>Developed a Python-based backend integrating machine learning for health predictions. Implemented data preprocessing and model training with pandas, NumPy, and scikit-learn, focusing on accuracy and model evaluation. Built a user-friendly interface using python Tkinter for symptom input and prediction display, emphasizing real-world applicability</p>
-          </div>
-          <div className='pl-5 pr-5 pt-1 pb-1 rounded text-left inset-0 backdrop-blur-xs'>
-            <a className='text-xl font-bold text-blue-500' target="_blank" href="https://github.com/nahidkhan9144/laravel_crud">Library Management System</a>
-            {/* <Image src='https://picsum.photos/800/400?random=2' height={150} width={150} alt='Library Management System' style={{ objectFit: "cover", borderRadius: "8px" }}/> */}
-            <p>Developed a comprehensive library management system using Laravel for the frontend and PHP for the backend. Implemented features such as user authentication, book search, and borrowing management, ensuring a seamless user experience.</p>
-          </div>
-          <div className='pl-5 pr-5 pt-1 pb-1 rounded text-left inset-0 backdrop-blur-xs'>
-            <a className='text-xl font-bold text-blue-500' target="_blank" href="">AI - Local ChatBot</a>
-              {/* <Image src='https://picsum.photos/800/400?random=3' height={150} width={150} alt='AI - Local ChatBot' style={{ objectFit: "cover", borderRadius: "8px" }}/> */}
-            <p>Implemented a local AI chatbot that runs entirely on-device using Ollama (Llama-family models) and a Streamlit UI. Added a Hugging Face fallback for offline pipelines, focusing on responsive UX, clean prompts, and easy model switching. Leveraged my experience in Python and modern web stacks to ship a smooth, user-friendly interface.</p>
-          </div>
-          <div className='pl-5 pr-5 pt-1 pb-1 rounded text-left inset-0 backdrop-blur-xs'>
-            <a className='text-xl font-bold text-blue-500' target="_blank" href="https://github.com/nahidkhan9144/mail-template-sender">QuickMail</a>
-              {/* <Image src='https://picsum.photos/800/400?random=3' height={150} width={150} alt='AI - Local ChatBot' style={{ objectFit: "cover", borderRadius: "8px" }}/> */}
-            <p>Mail Manager is a web-based application that enables users to create, manage, and send emails efficiently. The system is built with a React.js frontend and a Node.js backend, integrated with Nodemailer for email delivery. It also includes a database (SQLite/MongoDB) to store templates, mail history, and HR email records.</p>
-          </div>
-        </div>
+      {/* Heading */}
+      <h2 className="text-center text-4xl font-bold mb-4">About Me</h2>
+
+      {/* Description */}
+      <p className="max-w-3xl mx-auto text-xl text-center text-gray-200 leading-relaxed">
+        Web and Mobile Developer with 3+ years of experience, skilled in PHP,
+        Laravel, React.js, AngularJS, HTML5, CSS3, and JavaScript. Experienced in
+        building responsive applications, integrating RESTful APIs, and
+        delivering clean, maintainable code. Adaptable, proactive, and committed
+        to creating scalable and user-focused solutions.
+      </p>
+
+      {/* Divider */}
+      <hr className="max-w-4xl mx-auto my-12 border-gray-600" />
+
+      {/* Experience */}
+      {/* <section className="max-w-4xl mx-auto mb-14"> */}
+      <div className="bg-black/60 backdrop-blur-md rounded-md p-2 border mb-4 border-white/10">
+        <h3 className="text-center text-2xl font-bold text-blue-400 mb-2">
+          Experience
+        </h3>
       </div>
-    </>
-  )
-}
+      <section className='pl-5 pr-5 pt-1 pb-1 rounded text-left inset-0 backdrop-blur-xs flex justify-around'>
+        <fieldset>
+          <p className="text-xl font-bold">TATA Consultancy Services</p>
+          <p className="mt-1">System Engineer</p>
+          <p className="text-gray-300">Mumbai, India</p>
+          <p className="text-gray-400">Jan 2026 – Present</p>
+        </fieldset>
+        <fieldset>
+          <p className="text-xl font-bold">Tickle Right Eduventures</p>
+          <p className="mt-1">Junior Software Developer</p>
+          <p className="text-gray-300">Mumbai, India</p>
+          <p className="text-gray-400">Apr 2023 – Jan 2026</p>
+        </fieldset>
+      </section>
 
-export default page
+      <div className="bg-black/60 backdrop-blur-md rounded-md p-2 border mb-4 border-white/10 mt-6">
+        <h3 className="text-center text-2xl font-bold text-blue-400 mb-2">
+          Education
+        </h3>
+      </div>
+       <section className='pl-5 pr-5 pt-1 pb-1 rounded text-left inset-0 backdrop-blur-xs flex justify-around'>
+        <fieldset>
+          <p className="text-xl font-bold">Bachelor of Science – Information Technology</p>
+          <p className="mt-1">University Of Mumbai</p>
+          <p className="text-gray-300">Mumbai, India</p>
+          <p className="text-gray-400">Jun 2020 – Apr 2023</p>
+        </fieldset>
+        <fieldset>
+          <p className="text-xl font-bold">HSC</p>
+          <p className="mt-1">Maharashtra Board</p>
+          <p className="text-gray-300">Mumbai, India</p>
+          <p className="text-gray-400">Feb 2020</p>
+        </fieldset>
+      </section>
+
+      {/* <section className="max-w-4xl mx-auto">
+        <h3 className="text-center text-2xl font-bold text-blue-400 mb-6">
+          Education
+        </h3>
+
+        <div className="bg-black/60 backdrop-blur-md rounded-xl p-6 border border-white/10">
+          <p className="text-xl font-bold">
+            Bachelor of Science – Information Technology
+          </p>
+          <p className="text-gray-300">University of Mumbai</p>
+          <p className="text-gray-400">2020 – 2023 | 7.67 CGPA</p>
+        </div>
+      </section> */}
+
+    </div>
+  );
+}
